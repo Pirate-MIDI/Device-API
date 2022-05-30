@@ -1,0 +1,91 @@
+{
+  "Bridge6": {
+    "hardware": {
+      "footswitches": 6,
+      "flexiports": 2,
+      "midiOutPorts": 1,
+      "midiInPorts": 1,
+      "displayH": 256,
+      "displayV": 64
+    },
+    "messageStacks": {
+      "numberSwitchGroups": 8,
+      "toggleOnMessageLimit": 16,
+      "toggleOffMessageLimit": 16,
+      "secondaryToggleOnMessageLimit": 16,
+      "secondaryToggleOffMessageLimit": 16,
+      "pressMessageLimit": 8,
+      "releaseMessageLimit": 8,
+      "doublePressMessageLimit": 8,
+      "holdMessageLimit": 8,
+      "holdReleasseMessageLimit": 8,
+      "bankMessageLimit": 8,
+      "bankExpressionMessageLimit": 8,
+      "globalExpressionMessageLimit": 8,
+      "auxPressMesssageLimit": 1,
+      "auReleaseMesssageLimit": 1
+    },
+    "numberMidiClocks": 2,
+    "bankNameLength": 16,
+    "switchNameLength": 8
+  },
+  "Bridge4": {
+    "hardware": {
+      "footswitches": 4,
+      "flexiports": 2,
+      "midiOutPorts": 1,
+      "midiInPorts": 1,
+      "displayH": 256,
+      "displayV": 64
+    },
+    "messageStacks": {
+      "numberSwitchGroups": 8,
+      "toggleOnMessageLimit": 16,
+      "toggleOffMessageLimit": 16,
+      "secondaryToggleOnMessageLimit": 16,
+      "secondaryToggleOffMessageLimit": 16,
+      "pressMessageLimit": 8,
+      "releaseMessageLimit": 8,
+      "doublePressMessageLimit": 8,
+      "holdMessageLimit": 8,
+      "holdReleasseMessageLimit": 8,
+      "bankMessageLimit": 8,
+      "bankExpressionMessageLimit": 8,
+      "globalExpressionMessageLimit": 8,
+      "auxPressMesssageLimit": 1,
+      "auReleaseMesssageLimit": 1
+    },
+    "numberMidiClocks": 2,
+    "bankNameLength": 16,
+    "switchNameLength": 8
+  },
+  "Bridge1": {
+    "hardware": {
+      "footswitches": 1,
+      "flexiports": 1,
+      "midiOutPorts": 1,
+      "midiInPorts": 1,
+      "displayH": 128,
+      "displayV": 64
+    },
+    "messageStacks": {
+      "numberSwitchGroups": 8,
+      "toggleOnMessageLimit": 16,
+      "toggleOffMessageLimit": 16,
+      "secondaryToggleOnMessageLimit": 16,
+      "secondaryToggleOffMessageLimit": 16,
+      "pressMessageLimit": 8,
+      "releaseMessageLimit": 8,
+      "doublePressMessageLimit": 8,
+      "holdMessageLimit": 8,
+      "holdReleasseMessageLimit": 8,
+      "bankMessageLimit": 8,
+      "bankExpressionMessageLimit": 8,
+      "globalExpressionMessageLimit": 8,
+      "auxPressMesssageLimit": 1,
+      "auReleaseMesssageLimit": 1
+    },
+    "numberMidiClocks": 1,
+    "switchNameLength": 8
+  }
+}
