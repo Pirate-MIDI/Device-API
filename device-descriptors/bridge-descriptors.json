@@ -42,6 +42,10 @@
       "auxPressMesssageLimit": 1,
       "auxHoldMesssageLimit": 1
     },
+    "deviceApi": {
+      "bufferSize": 8192,
+      "tokenSize": 1000
+    },
     "numberMidiClocks": 2,
     "bankNameLength": 16,
     "switchNameLength": 8,
