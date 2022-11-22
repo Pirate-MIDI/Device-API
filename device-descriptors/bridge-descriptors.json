@@ -52,7 +52,9 @@
     "numberMidiClocks": 2,
     "bankNameLength": 16,
     "switchNameLength": 8,
-    "numberBanks": 100
+    "numberBanks": 100,
+    "switchGroups": 8,
+    "switchGroupMembers": 12
   },
   "Bridge4": {
     "hardware": {
@@ -103,7 +105,9 @@
     "numberMidiClocks": 2,
     "bankNameLength": 16,
     "switchNameLength": 8,
-    "numberBanks": 100
+    "numberBanks": 100,
+    "switchGroups": 8,
+    "switchGroupMembers": 8
   },
   "Bridge1": {
     "hardware": {
