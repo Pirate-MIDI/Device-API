@@ -66,7 +66,8 @@
       "fs2Fs5",
       "fs3Fs6",
       "fs4Fs5",
-      "fs5Fs6"
+      "fs5Fs6",
+      "none"
     ]
   },
   "Bridge4": {
@@ -128,6 +129,7 @@
       "fs1Fs2",
       "fs2Fs4",
       "fs3Fs4",
+      "none"
     ]
   },
   "Bridge1": {
