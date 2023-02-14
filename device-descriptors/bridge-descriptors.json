@@ -53,7 +53,21 @@
     "switchNameLength": 8,
     "numberBanks": 100,
     "switchGroups": 8,
-    "switchGroupMembers": 12
+    "switchGroupMembers": 12,
+    "bankTriggers": [
+      "fs1",
+      "fs2",
+      "fs3",
+      "fs4",
+      "fs5",
+      "fs6",
+      "fs1Fs2",
+      "fs2Fs3",
+      "fs2Fs5",
+      "fs3Fs6",
+      "fs4Fs5",
+      "fs5Fs6"
+    ]
   },
   "Bridge4": {
     "hardware": {
@@ -105,7 +119,16 @@
     "switchNameLength": 8,
     "numberBanks": 100,
     "switchGroups": 8,
-    "switchGroupMembers": 8
+    "switchGroupMembers": 8,
+    "bankTriggers": [
+      "fs1",
+      "fs2",
+      "fs3",
+      "fs4",
+      "fs1Fs2",
+      "fs2Fs4",
+      "fs3Fs4",
+    ]
   },
   "Bridge1": {
     "hardware": {
