@@ -17,6 +17,20 @@
         "relayOut",
         "pulseOut"
       ],
+      "flexiportModeLabels": [
+        "MIDI Out A",
+        "MIDI Out B",
+        "MIDI Out Tip",
+        "MIDI Out Ring",
+        "Device Link",
+        "Exp Single",
+        "Exp Dual",
+        "Switch In",
+        "Switch Out",
+        "Tap Tempo",
+        "Relay Out",
+        "Pulse Out"
+      ],
       "midiOutPorts": 1,
       "midiInPorts": 1,
       "displayH": 256,
@@ -68,6 +82,21 @@
       "fs4Fs5",
       "fs5Fs6",
       "none"
+    ],
+    "bankTriggerLabels": [
+      "FS1",
+      "FS2",
+      "FS3",
+      "FS4",
+      "FS5",
+      "FS6",
+      "FS1 + FS2",
+      "FS2 + FS",
+      "FS2 + FS5",
+      "FS3 + FS6",
+      "FS4 + FS5",
+      "FS5 + FS6",
+      "None"
     ]
   },
   "Bridge4": {
@@ -87,6 +116,20 @@
         "tapTempo",
         "relayOut",
         "pulseOut"
+      ],
+      "flexiportModeLabels": [
+        "MIDI Out A",
+        "MIDI Out B",
+        "MIDI Out Tip",
+        "MIDI Out Ring",
+        "Device Link",
+        "Exp Single",
+        "Exp Dual",
+        "Switch In",
+        "Switch Out",
+        "Tap Tempo",
+        "Relay Out",
+        "Pulse Out"
       ],
       "midiOutPorts": 1,
       "midiInPorts": 1,
@@ -130,6 +173,16 @@
       "fs2Fs4",
       "fs3Fs4",
       "none"
+    ],
+    "bankTriggerLabels": [
+      "FS1",
+      "FS2",
+      "FS3",
+      "FS4",
+      "FS1 + FS2",
+      "FS2 + FS4",
+      "FS3 + FS4",
+      "None"
     ]
   },
   "Bridge1": {
@@ -145,6 +198,16 @@
         "expSingle",
         "expDual",
         "switchIn"
+      ],
+      "flexiportModeLabels": [
+        "MIDI Out A",
+        "MIDI Out B",
+        "MIDI Out Tip",
+        "MIDI Out Ring",
+        "Device Link",
+        "Exp Single",
+        "Exp Dual",
+        "Switch In"
       ],
       "midiOutPorts": 1,
       "midiInPorts": 1,
@@ -193,6 +256,16 @@
         "expSingle",
         "expDual",
         "switchIn"
+      ],
+      "flexiportModeLabels": [
+        "MIDI Out A",
+        "MIDI Out B",
+        "MIDI Out Tip",
+        "MIDI Out Ring",
+        "Device Link",
+        "Exp Single",
+        "Exp Dual",
+        "Switch In"
       ]
     },
     "messageStacks": {
