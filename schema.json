@@ -1,0 +1,1813 @@
+{
+  "$id": "root",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "deviceSettings": {
+      "type": "object",
+      "properties": {
+        "deviceModel": {
+          "type": "string",
+          "default": "Bridge4",
+          "examples": [
+            "Bridge4",
+            "Bridge6"
+          ]
+        },
+        "firmwareVersion": {
+          "type": "string",
+          "default": "2.0.0-beta.1",
+          "examples": [
+            "2.0.0-beta.1"
+          ]
+        },
+        "hardwareVersion": {
+          "type": "string",
+          "default": "1.0.1",
+          "examples": [
+            "1.0.1"
+          ]
+        },
+        "uId": {
+          "type": "integer",
+          "default": 729503579,
+          "examples": [
+            729503579
+          ],
+          "maximum": 4294967295,
+          "minimum": 0,
+          "readOnly": false
+        },
+        "deviceName": {
+          "type": "string",
+          "default": "Bridge 4",
+          "examples": [
+            "Bridge 4"
+          ]
+        },
+        "profileId": {
+          "type": "integer",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        }
+      },
+      "required": [
+        "deviceModel",
+        "firmwareVersion",
+        "hardwareVersion",
+        "uId",
+        "deviceName",
+        "profileId"
+      ],
+      "readOnly": true
+    },
+    "globalSettings": {
+      "type": "object",
+      "properties": {
+        "currentBank": {
+          "type": "integer",
+          "default": 0,
+          "examples": [
+            0
+          ],
+          "readOnly": true
+        },
+        "midiChannel": {
+          "type": "integer",
+          "default": 0,
+          "examples": [
+            0
+          ],
+          "minimum": 0,
+          "maximum": 16
+        },
+        "ledBrightness": {
+          "type": "integer",
+          "default": 170,
+          "examples": [
+            170
+          ]
+        },
+        "flexi1Mode": {
+          "type": "string",
+          "default": "unassigned",
+          "examples": [
+            "unassigned"
+          ],
+          "enum": [
+            "midiOutA",
+            "midiOutB",
+            "midiOutTip",
+            "midiOutRing",
+            "deviceLink",
+            "expSingle",
+            "expDual",
+            "switchIn",
+            "switchOut",
+            "tapTempo",
+            "relayOut",
+            "pulseOut",
+            "favSwitch",
+            "unassigned"
+          ]
+        },
+        "flexi2Mode": {
+          "type": "string",
+          "default": "unassigned",
+          "examples": [
+            "unassigned"
+          ]
+        },
+        "uiMode": {
+          "type": "string",
+          "default": "extended",
+          "examples": [
+            "extended"
+          ],
+          "enum": [
+            "extended",
+            "simple"
+          ]
+        },
+        "preserveStates": {
+          "type": "boolean",
+          "default": false,
+          "examples": [
+            true,
+            false
+          ]
+        },
+        "sendStates": {
+          "type": "boolean",
+          "default": false,
+          "examples": [
+            true,
+            false
+          ]
+        },
+        "holdTime": {
+          "type": "integer",
+          "default": 100,
+          "examples": [
+            100
+          ]
+        },
+        "bootDelay": {
+          "type": "integer",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "bankDownTrigger": {
+          "type": "string",
+          "default": "fs1Fs2",
+          "examples": [
+            "fs1Fs2"
+          ]
+        },
+        "bankUpTrigger": {
+          "type": "string",
+          "default": "fs3Fs4",
+          "examples": [
+            "fs3Fs4"
+          ]
+        },
+        "bankPcMidiOutputs": {
+          "type": "object",
+          "properties": {
+            "flexi1": {
+              "type": "integer",
+              "default": 1,
+              "examples": [
+                1
+              ]
+            },
+            "flexi2": {
+              "type": "integer",
+              "default": 1,
+              "examples": [
+                1
+              ]
+            },
+            "midi0": {
+              "type": "integer",
+              "default": 1,
+              "examples": [
+                1
+              ]
+            },
+            "usb": {
+              "type": "integer",
+              "default": 1,
+              "examples": [
+                1
+              ]
+            }
+          },
+          "required": [
+            "flexi1",
+            "flexi2",
+            "midi0",
+            "usb"
+          ],
+          "additionalProperties": false
+        },
+        "deviceName": {
+          "type": "string",
+          "default": "Bridge 4",
+          "examples": [
+            "Bridge 4"
+          ]
+        },
+        "profileId": {
+          "type": "integer",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "customLedColors": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          }
+        },
+        "midiClocks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "outputs": {
+                "type": "object",
+                "properties": {
+                  "flexi1": {
+                    "type": "boolean",
+                    "default": false,
+                    "examples": [
+                      true,
+                      false
+                    ]
+                  },
+                  "flexi2": {
+                    "type": "boolean",
+                    "default": false,
+                    "examples": [
+                      true,
+                      false
+                    ]
+                  },
+                  "midi0": {
+                    "type": "boolean",
+                    "default": false,
+                    "examples": [
+                      true,
+                      false
+                    ]
+                  },
+                  "usb": {
+                    "type": "boolean",
+                    "default": false,
+                    "examples": [
+                      true,
+                      false
+                    ]
+                  }
+                },
+                "required": [
+                  "flexi1",
+                  "flexi2",
+                  "midi0",
+                  "usb"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "outputs"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "flexi1ThruHandles": {
+          "type": "object",
+          "properties": {
+            "flexi1": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "flexi2": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "midi0": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "usb": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            }
+          },
+          "required": [
+            "flexi1",
+            "flexi2",
+            "midi0",
+            "usb"
+          ],
+          "additionalProperties": false
+        },
+        "flexi2ThruHandles": {
+          "type": "object",
+          "properties": {
+            "flexi1": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "flexi2": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "midi0": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "usb": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            }
+          },
+          "required": [
+            "flexi1",
+            "flexi2",
+            "midi0",
+            "usb"
+          ],
+          "additionalProperties": false
+        },
+        "midi0ThruHandles": {
+          "type": "object",
+          "properties": {
+            "flexi1": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "flexi2": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "midi0": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "usb": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            }
+          },
+          "required": [
+            "flexi1",
+            "flexi2",
+            "midi0",
+            "usb"
+          ],
+          "additionalProperties": false
+        },
+        "usbThruHandles": {
+          "type": "object",
+          "properties": {
+            "flexi1": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "flexi2": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "midi0": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "usb": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            }
+          },
+          "required": [
+            "flexi1",
+            "flexi2",
+            "midi0",
+            "usb"
+          ],
+          "additionalProperties": false
+        },
+        "expMessages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "numMessages": {
+                "type": "integer",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              }
+            },
+            "required": [
+              "numMessages"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "auxMessages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "tip": {
+                "type": "object",
+                "properties": {
+                  "pressMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "holdMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "toggleOnMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "toggleOffMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "pressMessages",
+                  "holdMessages",
+                  "toggleOnMessages",
+                  "toggleOffMessages"
+                ],
+                "additionalProperties": false
+              },
+              "ring": {
+                "type": "object",
+                "properties": {
+                  "pressMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "holdMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "toggleOnMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "toggleOffMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "pressMessages",
+                  "holdMessages",
+                  "toggleOnMessages",
+                  "toggleOffMessages"
+                ],
+                "additionalProperties": false
+              },
+              "tipRing": {
+                "type": "object",
+                "properties": {
+                  "pressMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "holdMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "toggleOnMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "toggleOffMessages": {
+                    "type": "object",
+                    "properties": {
+                      "numMessages": {
+                        "type": "integer",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "messages": {
+                        "type": "array"
+                      }
+                    },
+                    "required": [
+                      "numMessages",
+                      "messages"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "pressMessages",
+                  "holdMessages",
+                  "toggleOnMessages",
+                  "toggleOffMessages"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "tip",
+              "ring",
+              "tipRing"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "bootMessages": {
+          "type": "object",
+          "properties": {
+            "numMessages": {
+              "type": "integer",
+              "default": 0,
+              "examples": [
+                0
+              ]
+            },
+            "messages": {
+              "type": "array"
+            }
+          },
+          "required": [
+            "numMessages",
+            "messages"
+          ],
+          "additionalProperties": false
+        },
+        "deviceLink": {
+          "type": "object",
+          "properties": {
+            "role": {
+              "type": "string",
+              "default": "satellite",
+              "examples": [
+                "satellite"
+              ]
+            },
+            "bankNav": {
+              "type": "boolean",
+              "default": true,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "bankName": {
+              "type": "boolean",
+              "default": true,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "midiStream": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "switchGroups": {
+              "type": "boolean",
+              "default": false,
+              "examples": [
+                true,
+                false
+              ]
+            }
+          },
+          "required": [
+            "role",
+            "bankNav",
+            "bankName",
+            "midiStream",
+            "switchGroups"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "currentBank",
+        "midiChannel",
+        "ledBrightness",
+        "flexi1Mode",
+        "flexi2Mode",
+        "uiMode",
+        "preserveStates",
+        "sendStates",
+        "holdTime",
+        "bootDelay",
+        "bankDownTrigger",
+        "bankUpTrigger",
+        "bankPcMidiOutputs",
+        "deviceName",
+        "profileId",
+        "customLedColors",
+        "midiClocks",
+        "flexi1ThruHandles",
+        "flexi2ThruHandles",
+        "midi0ThruHandles",
+        "usbThruHandles",
+        "expMessages",
+        "auxMessages",
+        "bootMessages",
+        "deviceLink"
+      ],
+      "additionalProperties": false
+    },
+    "bankSettings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "bankName": {
+            "type": "string",
+            "default": "Bank 1",
+            "examples": [
+              "Bank 1"
+            ]
+          },
+          "bankId": {
+            "type": "integer",
+            "default": 1481765933,
+            "examples": [
+              1481765933
+            ]
+          },
+          "midiClockATempo": {
+            "type": "integer",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "midiClockBTempo": {
+            "type": "integer",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "bankMessages": {
+            "type": "object",
+            "properties": {
+              "numMessages": {
+                "type": "integer",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "messages": {
+                "type": "array"
+              }
+            },
+            "required": [
+              "numMessages",
+              "messages"
+            ],
+            "additionalProperties": false
+          },
+          "expMessages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "numMessages": {
+                  "type": "integer",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "messages": {
+                  "type": "array"
+                }
+              },
+              "required": [
+                "numMessages",
+                "messages"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "auxMessages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tip": {
+                  "type": "object",
+                  "properties": {
+                    "pressMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "holdMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "toggleOnMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "toggleOffMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "pressMessages",
+                    "holdMessages",
+                    "toggleOnMessages",
+                    "toggleOffMessages"
+                  ],
+                  "additionalProperties": false
+                },
+                "ring": {
+                  "type": "object",
+                  "properties": {
+                    "pressMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "holdMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "toggleOnMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "toggleOffMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "pressMessages",
+                    "holdMessages",
+                    "toggleOnMessages",
+                    "toggleOffMessages"
+                  ],
+                  "additionalProperties": false
+                },
+                "tipRing": {
+                  "type": "object",
+                  "properties": {
+                    "pressMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "holdMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "toggleOnMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "toggleOffMessages": {
+                      "type": "object",
+                      "properties": {
+                        "numMessages": {
+                          "type": "integer",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "messages": {
+                          "type": "array"
+                        }
+                      },
+                      "required": [
+                        "numMessages",
+                        "messages"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "pressMessages",
+                    "holdMessages",
+                    "toggleOnMessages",
+                    "toggleOffMessages"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "tip",
+                "ring",
+                "tipRing"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "footswitches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "default": "FS 1",
+                  "examples": [
+                    "FS 1"
+                  ]
+                },
+                "primaryState": {
+                  "type": "boolean",
+                  "default": false,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                },
+                "secondaryState": {
+                  "type": "boolean",
+                  "default": false,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                },
+                "primaryMode": {
+                  "type": "string",
+                  "default": "toggle",
+                  "examples": [
+                    "toggle"
+                  ]
+                },
+                "secondaryMode": {
+                  "type": "string",
+                  "default": "holdToggle",
+                  "examples": [
+                    "holdToggle"
+                  ]
+                },
+                "primaryColor": {
+                  "type": "integer",
+                  "default": 15761536,
+                  "examples": [
+                    15761536
+                  ]
+                },
+                "secondaryColor": {
+                  "type": "integer",
+                  "default": 65535,
+                  "examples": [
+                    65535
+                  ]
+                },
+                "primaryLedMode": {
+                  "type": "string",
+                  "default": "onOff",
+                  "examples": [
+                    "onOff"
+                  ]
+                },
+                "secondaryLedMode": {
+                  "type": "string",
+                  "default": "onOff",
+                  "examples": [
+                    "onOff"
+                  ]
+                },
+                "sequentialPattern": {
+                  "type": "string",
+                  "default": "forward",
+                  "examples": [
+                    "forward"
+                  ]
+                },
+                "sequentialRepeat": {
+                  "type": "string",
+                  "default": "all",
+                  "examples": [
+                    "all"
+                  ]
+                },
+                "sequentialSendMode": {
+                  "type": "string",
+                  "default": "always",
+                  "examples": [
+                    "always"
+                  ]
+                },
+                "linkedSwitch": {
+                  "type": "integer",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "currentStep": {
+                  "type": "integer",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "midiClock": {
+                  "type": "null"
+                },
+                "lfo": {
+                  "type": "object",
+                  "properties": {
+                    "state": {
+                      "type": "null"
+                    },
+                    "frequency": {
+                      "type": "integer",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    },
+                    "minLimit": {
+                      "type": "integer",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    },
+                    "maxLimit": {
+                      "type": "integer",
+                      "default": 127,
+                      "examples": [
+                        127
+                      ]
+                    },
+                    "trigger": {
+                      "type": "string",
+                      "default": "primary",
+                      "examples": [
+                        "primary"
+                      ]
+                    },
+                    "waveform": {
+                      "type": "string",
+                      "default": "sine",
+                      "examples": [
+                        "sine"
+                      ]
+                    },
+                    "resolution": {
+                      "type": "integer",
+                      "default": 1,
+                      "examples": [
+                        1
+                      ]
+                    },
+                    "resetOnStop": {
+                      "type": "boolean",
+                      "default": true,
+                      "examples": [
+                        true,
+                        false
+                      ]
+                    },
+                    "clock": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "frequency",
+                    "minLimit",
+                    "maxLimit",
+                    "trigger",
+                    "waveform",
+                    "resolution",
+                    "resetOnStop",
+                    "clock"
+                  ],
+                  "additionalProperties": false
+                },
+                "toggleOnMessages": {
+                  "type": "object",
+                  "properties": {
+                    "numMessages": {
+                      "type": "integer",
+                      "default": 1,
+                      "examples": [
+                        1
+                      ]
+                    },
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "statusByte": {
+                            "type": "integer",
+                            "default": 176,
+                            "examples": [
+                              176
+                            ]
+                          },
+                          "dataByte1": {
+                            "type": "integer",
+                            "default": 0,
+                            "examples": [
+                              0
+                            ]
+                          },
+                          "dataByte2": {
+                            "type": "integer",
+                            "default": 127,
+                            "examples": [
+                              127
+                            ]
+                          },
+                          "outputs": {
+                            "type": "object",
+                            "properties": {
+                              "midi0": {
+                                "type": "boolean",
+                                "default": true,
+                                "examples": [
+                                  true,
+                                  false
+                                ]
+                              },
+                              "flexi1": {
+                                "type": "boolean",
+                                "default": true,
+                                "examples": [
+                                  true,
+                                  false
+                                ]
+                              },
+                              "flexi2": {
+                                "type": "boolean",
+                                "default": true,
+                                "examples": [
+                                  true,
+                                  false
+                                ]
+                              },
+                              "usb": {
+                                "type": "boolean",
+                                "default": true,
+                                "examples": [
+                                  true,
+                                  false
+                                ]
+                              }
+                            },
+                            "required": [
+                              "midi0",
+                              "flexi1",
+                              "flexi2",
+                              "usb"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "statusByte",
+                          "dataByte1",
+                          "dataByte2",
+                          "outputs"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "numMessages",
+                    "messages"
+                  ],
+                  "additionalProperties": false
+                },
+                "toggleOffMessages": {
+                  "type": "object",
+                  "properties": {
+                    "numMessages": {
+                      "type": "integer",
+                      "default": 1,
+                      "examples": [
+                        1
+                      ]
+                    },
+                    "messages": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "statusByte": {
+                            "type": "integer",
+                            "default": 176,
+                            "examples": [
+                              176
+                            ]
+                          },
+                          "dataByte1": {
+                            "type": "integer",
+                            "default": 0,
+                            "examples": [
+                              0
+                            ]
+                          },
+                          "dataByte2": {
+                            "type": "integer",
+                            "default": 127,
+                            "examples": [
+                              127
+                            ]
+                          },
+                          "outputs": {
+                            "type": "object",
+                            "properties": {
+                              "midi0": {
+                                "type": "boolean",
+                                "default": true,
+                                "examples": [
+                                  true,
+                                  false
+                                ]
+                              },
+                              "flexi1": {
+                                "type": "boolean",
+                                "default": true,
+                                "examples": [
+                                  true,
+                                  false
+                                ]
+                              },
+                              "flexi2": {
+                                "type": "boolean",
+                                "default": true,
+                                "examples": [
+                                  true,
+                                  false
+                                ]
+                              },
+                              "usb": {
+                                "type": "boolean",
+                                "default": true,
+                                "examples": [
+                                  true,
+                                  false
+                                ]
+                              }
+                            },
+                            "required": [
+                              "midi0",
+                              "flexi1",
+                              "flexi2",
+                              "usb"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "statusByte",
+                          "dataByte1",
+                          "dataByte2",
+                          "outputs"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "numMessages",
+                    "messages"
+                  ],
+                  "additionalProperties": false
+                },
+                "pressMessages": {
+                  "type": "object",
+                  "properties": {
+                    "numMessages": {
+                      "type": "integer",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    },
+                    "messages": {
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "numMessages",
+                    "messages"
+                  ],
+                  "additionalProperties": false
+                },
+                "releaseMessages": {
+                  "type": "object",
+                  "properties": {
+                    "numMessages": {
+                      "type": "integer",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    },
+                    "messages": {
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "numMessages",
+                    "messages"
+                  ],
+                  "additionalProperties": false
+                },
+                "doublePressMessages": {
+                  "type": "object",
+                  "properties": {
+                    "numMessages": {
+                      "type": "integer",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    },
+                    "messages": {
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "numMessages",
+                    "messages"
+                  ],
+                  "additionalProperties": false
+                },
+                "holdMessages": {
+                  "type": "object",
+                  "properties": {
+                    "numMessages": {
+                      "type": "integer",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    },
+                    "messages": {
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "numMessages",
+                    "messages"
+                  ],
+                  "additionalProperties": false
+                },
+                "holdReleaseMessages": {
+                  "type": "object",
+                  "properties": {
+                    "numMessages": {
+                      "type": "integer",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    },
+                    "messages": {
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "numMessages",
+                    "messages"
+                  ],
+                  "additionalProperties": false
+                },
+                "secondaryToggleOnMessages": {
+                  "type": "object",
+                  "properties": {
+                    "numMessages": {
+                      "type": "integer",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    },
+                    "messages": {
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "numMessages",
+                    "messages"
+                  ],
+                  "additionalProperties": false
+                },
+                "secondaryToggleOffMessages": {
+                  "type": "object",
+                  "properties": {
+                    "numMessages": {
+                      "type": "integer",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    },
+                    "messages": {
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "numMessages",
+                    "messages"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "name",
+                "primaryState",
+                "secondaryState",
+                "primaryMode",
+                "secondaryMode",
+                "primaryColor",
+                "secondaryColor",
+                "primaryLedMode",
+                "secondaryLedMode",
+                "sequentialPattern",
+                "sequentialRepeat",
+                "sequentialSendMode",
+                "linkedSwitch",
+                "currentStep",
+                "midiClock",
+                "lfo",
+                "toggleOnMessages",
+                "toggleOffMessages",
+                "pressMessages",
+                "releaseMessages",
+                "doublePressMessages",
+                "holdMessages",
+                "holdReleaseMessages",
+                "secondaryToggleOnMessages",
+                "secondaryToggleOffMessages"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "bankName",
+          "bankId",
+          "midiClockATempo",
+          "midiClockBTempo",
+          "bankMessages",
+          "expMessages",
+          "auxMessages",
+          "footswitches"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
