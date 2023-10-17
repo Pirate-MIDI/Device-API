@@ -65,23 +65,34 @@
 			},
 			"sendStates": {
 			  "type": "boolean",
-			  "default": false
+			  "default": false,
+			  "title": "Send States",
+			  "description": "When enabled, any switch states that are recalled will send associated messages",
 			},
 			"holdTime": {
 			  "type": "integer",
-			  "default": 100
+			  "default": 100,
+			  "title": "Hold Time",
+			  "description": "Value set in milliseconds to control length of time before the hold switch state is triggered",
 			},
 			"bootDelay": {
 			  "type": "integer",
-			  "default": 0
+			  "default": 0,
+ 			  "title": "Boot Delay",
+			  "description": "Value set in milliseconds to delay the device becoming active on power up and sending boot messages",
 			},
 			"bankDownTrigger": {
 			  "type": "string",
-			  "default": "fs1Fs2"
+			  "default": "fs1Fs2",
+			  "title": "Bank Down Trigger",
+			  "description": "Defines which footswitch combination triggers a bank down event"
+
 			},
 			"bankUpTrigger": {
 			  "type": "string",
-			  "default": "fs3Fs4"
+			  "default": "fs3Fs4",
+ 			  "title": "Bank Up Trigger",
+			  "description": "Defines which footswitch combination triggers a bank up event"
 			},
 			"bankPcMidiOutputs": {
 			  "type": "object",
@@ -102,6 +113,7 @@
 					"type": "integer",
 					"default": 1
 				 }
+				  
 			  },
 			  "required": [
 				 "flexi1",
@@ -110,21 +122,29 @@
 				 "usb"
 			  ],
 			  "additionalProperties": false
+			  "title": "Bank Change PC MIDI Outputs",
+			  "description": "Defines the MIDI channel number on each MIDI output for automatic PC messages corresponding to bank number. Can be set to 'false' to stop MIDI messages being sent"
 			},
 			"deviceName": {
 			  "type": "string",
-			  "default": "Bridge 4"
+			  "default": "Bridge 4",
+ 			  "title": "Device Name",
+			  "description": "Sets device name that appears when enumerated as a USB device"
 			},
 			"profileId": {
 			  "type": "integer",
-			  "default": 0
+			  "default": 0,
+			  "title": "Profile ID",
+			  "description": " "
 			},
 			"customLedColors": {
 			  "type": "array",
 			  "items": {
 				 "type": "integer",
 				 "default": 0
-			  }
+			  },
+			  "title": "Custom LED Colors",
+			  "description": "Defines up to twelve custom global LED colors to be stored on board the device"
 			},
 			"midiClocks": {
 			  "type": "array",
@@ -165,6 +185,8 @@
 				 ],
 				 "additionalProperties": false
 			  }
+			  "title": "MIDI Clocks",
+			  "description": "Defines MIDI Clocks A and B and which MIDI outputs will send each MIDI Clock"
 			},
 			"flexi1ThruHandles": {
 			  "type": "object",
