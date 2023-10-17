@@ -67,19 +67,19 @@
 			  "type": "boolean",
 			  "default": false,
 			  "title": "Send States",
-			  "description": "When enabled, any switch states that are recalled will send associated messages",
+			  "description": "When enabled, any switch states that are recalled will send associated messages"
 			},
 			"holdTime": {
 			  "type": "integer",
 			  "default": 100,
 			  "title": "Hold Time",
-			  "description": "Value set in milliseconds to control length of time before the hold switch state is triggered",
+			  "description": "Value set in milliseconds to control length of time before the hold switch state is triggered"
 			},
 			"bootDelay": {
 			  "type": "integer",
 			  "default": 0,
  			  "title": "Boot Delay",
-			  "description": "Value set in milliseconds to delay the device becoming active on power up and sending boot messages",
+			  "description": "Value set in milliseconds to delay the device becoming active on power up and sending boot messages"
 			},
 			"bankDownTrigger": {
 			  "type": "string",
