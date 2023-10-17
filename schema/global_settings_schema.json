@@ -121,7 +121,7 @@
 				 "midi0",
 				 "usb"
 			  ],
-			  "additionalProperties": false
+			  "additionalProperties": false,
 			  "title": "Bank Change PC MIDI Outputs",
 			  "description": "Defines the MIDI channel number on each MIDI output for automatic PC messages corresponding to bank number. Can be set to 'false' to stop MIDI messages being sent"
 			},
@@ -184,9 +184,9 @@
 					"outputs"
 				 ],
 				 "additionalProperties": false
-			  }
+			  },
 			  "title": "MIDI Clocks",
-			  "description": "Defines MIDI Clocks A and B and which MIDI outputs will send each MIDI Clock"
+			  "description": "Defines MIDI Clocks A and B and which MIDI outputs will send MIDI Clock"
 			},
 			"flexi1ThruHandles": {
 			  "type": "object",
@@ -214,7 +214,9 @@
 				 "midi0",
 				 "usb"
 			  ],
-			  "additionalProperties": false
+			  "additionalProperties": false,
+			  "title": "Flexiport 1 MIDI Thru Handles",
+			  "description": "When enabled, incoming MIDI messages on Flexiport 1 will be sent to the outputs selected"
 			},
 			"flexi2ThruHandles": {
 			  "type": "object",
@@ -242,7 +244,9 @@
 				 "midi0",
 				 "usb"
 			  ],
-			  "additionalProperties": false
+			  "additionalProperties": false,
+			  "title": "Flexiport 2 MIDI Thru Handles",
+			  "description": "When enabled, incoming MIDI messages on Flexiport 2 will be sent to the outputs selected"
 			},
 			"midi0ThruHandles": {
 			  "type": "object",
@@ -270,7 +274,9 @@
 				 "midi0",
 				 "usb"
 			  ],
-			  "additionalProperties": false
+			  "additionalProperties": false,
+			  "title": "Midi0 MIDI Thru Handles",
+			  "description": "When enabled, incoming MIDI messages on midi0 will be sent to the outputs selected"
 			},
 			"usbThruHandles": {
 			  "type": "object",
@@ -298,7 +304,9 @@
 				 "midi0",
 				 "usb"
 			  ],
-			  "additionalProperties": false
+			  "additionalProperties": false,
+			  "title": "USB MIDI Thru Handles",
+			  "description": "When enabled, incoming USB MIDI messages will be sent to the outputs selected"
 			},
 			"expMessages": {
 			  "type": "array",
@@ -314,7 +322,9 @@
 					"numMessages"
 				 ],
 				 "additionalProperties": false
-			  }
+			  },
+			  "title": "Expression Messages",
+			  "description": "List of messages assigned to expression pedals at the global level. Sent irrespective of current bank"
 			},
 			"auxMessages": {
 			  "type": "array",
@@ -339,7 +349,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Tip Press Messages",
+							"description": "Messages sent, regardless of current bank, when tip-connected aux switch is pressed"
 						 },
 						 "holdMessages": {
 							"type": "object",
@@ -356,7 +368,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Tip Hold Messages",
+							"description": "Messages sent, regardless of current bank, when tip-connected aux switch is held"
 						 },
 						 "toggleOnMessages": {
 							"type": "object",
@@ -373,7 +387,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Tip Toggle On Messages",
+							"description": "Messages sent, regardless of current bank, when tip-connected aux switch is pressed and the current toggle state is 'off'"
 						 },
 						 "toggleOffMessages": {
 							"type": "object",
@@ -390,7 +406,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Tip Toggle Off Messages",
+							"description": "Messages sent, regardless of current bank, when tip-connected aux switch is pressed and the current toggle state is 'on'"
 						 }
 					  },
 					  "required": [
@@ -399,7 +417,9 @@
 						 "toggleOnMessages",
 						 "toggleOffMessages"
 					  ],
-					  "additionalProperties": false
+					  "additionalProperties": false,
+					  "title": "Tip Messages",
+					  "description": "Messages associated with the tip-connected switch on an aux switch"
 					},
 					"ring": {
 					  "type": "object",
@@ -419,7 +439,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Ring Press Messages",
+							"description": "Messages sent, regardless of current bank, when ring-connected aux switch is pressed"
 						 },
 						 "holdMessages": {
 							"type": "object",
@@ -436,7 +458,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Ring Hold Messages",
+							"description": "Messages sent, regardless of current bank, when ring-connected aux switch is held"
 						 },
 						 "toggleOnMessages": {
 							"type": "object",
@@ -453,7 +477,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Ring Toggle On Messages",
+							"description": "Messages sent, regardless of current bank, when ring-connected aux switch is pressed and the current toggle state is 'off'"
 						 },
 						 "toggleOffMessages": {
 							"type": "object",
@@ -470,7 +496,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Ring Toggle Off Messages",
+							"description": "Messages sent, regardless of current bank, when ring-connected aux switch is pressed and the current toggle state is 'on'"
 						 }
 					  },
 					  "required": [
@@ -479,7 +507,9 @@
 						 "toggleOnMessages",
 						 "toggleOffMessages"
 					  ],
-					  "additionalProperties": false
+					  "additionalProperties": false,
+					  "title": "Ring Messages",
+					  "description": "Messages associated with the ring-connected switch on an aux switch"
 					},
 					"tipRing": {
 					  "type": "object",
@@ -499,7 +529,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Tip+Ring Press Messages",
+							"description": "Messages sent, regardless of current bank, when tip+ring-connected aux switch is pressed"
 						 },
 						 "holdMessages": {
 							"type": "object",
@@ -516,7 +548,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Tip+Ring Hold Messages",
+							"description": "Messages sent, regardless of current bank, when tip+ring-connected aux switch is held"
 						 },
 						 "toggleOnMessages": {
 							"type": "object",
@@ -533,7 +567,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Tip+Ring Toggle On Messages",
+							"description": "Messages sent, regardless of current bank, when tip+ring-connected aux switch is pressed and the current toggle state is 'off'"
 						 },
 						 "toggleOffMessages": {
 							"type": "object",
@@ -550,7 +586,9 @@
 							  "numMessages",
 							  "messages"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"title": "Global Aux Tip+Ring Toggle Off Messages",
+							"description": "Messages sent, regardless of current bank, when tip+ring-connected aux switch is pressed and the current toggle state is 'on'"
 						 }
 					  },
 					  "required": [
@@ -559,7 +597,9 @@
 						 "toggleOnMessages",
 						 "toggleOffMessages"
 					  ],
-					  "additionalProperties": false
+					  "additionalProperties": false,
+					  "title": "Tip+Ring Messages",
+					  "description": "Messages associated with the tip+ring-connected switch on an aux switch"
 					}
 				 },
 				 "required": [
@@ -567,7 +607,9 @@
 					"ring",
 					"tipRing"
 				 ],
-				 "additionalProperties": false
+				 "additionalProperties": false,
+				 "title": "Aux Messages",
+			     "description": "List of messages assigned to aux switches at the global level. Sent irrespective of current bank"
 			  }
 			},
 			"bootMessages": {
@@ -585,30 +627,42 @@
 				 "numMessages",
 				 "messages"
 			  ],
-			  "additionalProperties": false
+			  "additionalProperties": false,
+			  "title": "Boot Messages",
+			  "description": "List of messages sent automatically at device power-up after the boot delay time has been completed"
 			},
 			"deviceLink": {
 			  "type": "object",
 			  "properties": {
 				 "role": {
 					"type": "string",
-					"default": "satellite"
+					"default": "satellite",
+					"title": "Role",
+					"description": "defines whether the device takes main or satellite role in device link network"
 				 },
 				 "bankNav": {
 					"type": "boolean",
-					"default": true
+					"default": true,
+					"title": "Bank Navigation",
+					"description": "When enabled, device will change banks when any other device in Device Link network changes bank"
 				 },
 				 "bankName": {
 					"type": "boolean",
-					"default": true
+					"default": true,
+					"title": "Bank Name",
+					"description": "When enabled, bank name will be temporarily over-written by the 'Main' device in the Device Link network"
 				 },
 				 "midiStream": {
 					"type": "boolean",
-					"default": false
+					"default": false,
+					"title": "MIDI Stream",
+					"description": "When enabled, MIDI is sent and received over the Device Link Flexiport connection"
 				 },
 				 "switchGroups": {
 					"type": "boolean",
-					"default": false
+					"default": false,
+					"title": "Switch Groups",
+					"description": "When enabled, switch group interactions will be considered across all devices in the Device Link network. e.g. Group 1 on all devices will act as one switch group"
 				 }
 			  },
 			  "required": [
@@ -618,7 +672,9 @@
 				 "midiStream",
 				 "switchGroups"
 			  ],
-			  "additionalProperties": false
+			  "additionalProperties": false,
+			  "title": "Device Link Settings",
+			  "description": "Options defining which features of Device Link are enabled"
 			}
 		 },
 		 "required": [
@@ -647,7 +703,9 @@
 			"bootMessages",
 			"deviceLink"
 		 ],
-		 "additionalProperties": false
+		 "additionalProperties": false,
+		 "title": "Global Settings",
+		 "description": "Settings that affect the device regardless of the current bank"
 	  }
 	},
 	"required": [
