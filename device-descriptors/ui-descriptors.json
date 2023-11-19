@@ -1,16 +1,30 @@
 {
-  "defaultColours": [
-    "Coral": "f08080",
-    "Aqua": "ffff",
-    "Peach": "ed823e",
-    "Purple": "ff00ff",
-    "Olive": "9abd32",
-    "Orange": "ef7f39",
-    "Yellow": "efd856",
-    "Green": "00ff00",
-    "Red": "ad323C",
-    "Blue": "1f529e",
-    "White": "ffffff",
-    "Black": "0"
-  ]
+    "defaultColours": [
+        "f08080",
+        "00ffff",
+        "ed823e",
+        "ff00ff",
+        "9abd32",
+        "ef7f39",
+        "efd856",
+        "00ff00",
+        "ad323C",
+        "1f529e",
+        "ffffff",
+        "000000"
+    ],
+    "defaultColourLabels": [
+        "Coral",
+        "Aqua",
+        "Peach",
+        "Purple",
+        "Olive",
+        "Orange",
+        "Yellow",
+        "Green",
+        "Red",
+        "Blue",
+        "White",
+        "Black"
+    ]
 }
