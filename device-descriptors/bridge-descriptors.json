@@ -297,7 +297,29 @@
             "auxToggleOnMessageLimit": 1,
             "auxToggleOffMessageLimit": 1
         },
+        "deviceApi": {
+            "bufferSize": 8192,
+            "tokenSize": 1000
+        },
         "numberMidiClocks": 1,
-        "numberBanks": 128
+        "bankNameLength": 16,
+        "switchNameLength": 8,
+        "numberBanks": 128,
+        "switchGroups": 8,
+        "switchGroupMembers": 3,
+        "bankTriggers": [
+            "fs1",
+            "fs2",
+            "fs3",
+            "none"
+        ],
+        "bankTriggerLabels": [
+            "FS1",
+            "FS2",
+            "FS3",
+            "None"
+        ],
+        "bankDownTriggerDefault": "None",
+        "bankUpTriggerDefault": "None"
     }
 }
