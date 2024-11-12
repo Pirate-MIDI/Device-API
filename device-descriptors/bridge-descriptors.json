@@ -298,6 +298,6 @@
             "auxToggleOffMessageLimit": 1
         },
         "numberMidiClocks": 1,
-        "numberBanks": 100
+        "numberBanks": 128
     }
 }
