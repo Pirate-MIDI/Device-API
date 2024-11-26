@@ -58,7 +58,9 @@
             "auxPressMessageLimit": 1,
             "auxHoldMessageLimit": 1,
             "auxToggleOnMessageLimit": 1,
-            "auxToggleOffMessageLimit": 1
+            "auxToggleOffMessageLimit": 1,
+            "bankLadderMessageLimit": 32,
+            "globalLadderMessageLimit": 32
         },
         "deviceApi": {
             "bufferSize": 8192,
@@ -162,7 +164,9 @@
             "auxPressMessageLimit": 1,
             "auxHoldMessageLimit": 1,
             "auxToggleOnMessageLimit": 1,
-            "auxToggleOffMessageLimit": 1
+            "auxToggleOffMessageLimit": 1,
+            "bankLadderMessageLimit": 32,
+            "globalLadderMessageLimit": 32
         },
         "numberMidiClocks": 2,
         "bankNameLength": 16,
@@ -193,64 +197,6 @@
         "bankDownTriggerDefault": "fs1Fs2",
         "bankUpTriggerDefault": "fs3Fs4"
     },
-    "Bridge1": {
-        "hardware": {
-            "footswitches": 1,
-            "flexiports": 1,
-            "flexiportModes": [
-                "midiOutA",
-                "midiOutB",
-                "midiOutTip",
-                "midiOutRing",
-                "deviceLink",
-                "expSingle",
-                "expDual",
-                "switchIn"
-            ],
-            "flexiportModeLabels": [
-                "MIDI Out A",
-                "MIDI Out B",
-                "MIDI Out Tip",
-                "MIDI Out Ring",
-                "Device Link",
-                "Exp Single",
-                "Exp Dual",
-                "Switch In"
-            ],
-            "midiOutPorts": 1,
-            "midiInPorts": 1,
-            "displayH": 128,
-            "displayV": 64
-        },
-        "messageStacks": {
-            "toggleOnMessageLimit": 16,
-            "toggleOffMessageLimit": 16,
-            "secondaryToggleOnMessageLimit": 16,
-            "secondaryToggleOffMessageLimit": 16,
-            "pressMessageLimit": 8,
-            "releaseMessageLimit": 8,
-            "doublePressMessageLimit": 8,
-            "holdMessageLimit": 8,
-            "holdReleaseMessageLimit": 8,
-            "sequentialMessageLimit": 16,
-            "sequentialStepLimit": 16,
-            "scrollingMessageLimit": 16,
-            "bankMessageLimit": 8,
-            "bootMessageLimit": 16,
-            "bankExpressionMessageLimit": 8,
-            "globalExpressionMessageLimit": 16,
-            "auxPressMessageLimit": 1,
-            "auxHoldMessageLimit": 1,
-            "auxToggleOnMessageLimit": 1,
-            "auxToggleOffMessageLimit": 1
-        },
-        "numberMidiClocks": 1,
-        "bankNameLength": 16,
-        "switchNameLength": 8,
-        "numberBanks": 100,
-        "switchGroups": 8,
-        "switchGroupMembers": 2
-    },
     "Aero": {
         "hardware": {
             "footswitches": 3,
@@ -277,25 +223,28 @@
             ]
         },
         "messageStacks": {
-            "numberSwitchGroups": 8,
-            "toggleOnMessageLimit": 8,
-            "toggleOffMessageLimit": 8,
-            "pressMessageLimit": 8,
-            "releaseMessageLimit": 8,
-            "doublePressMessageLimit": 8,
-            "holdMessageLimit": 8,
-            "holdReleaseMessageLimit": 8,
-            "sequentialMessageLimit": 16,
-            "sequentialStepLimit": 16,
-            "scrollingMessageLimit": 16,
-            "bankMessageLimit": 8,
-            "bootMessageLimit": 8,
+            "toggleOnMessageLimit": 64,
+            "toggleOffMessageLimit": 64,
+            "secondaryToggleOnMessageLimit": 16,
+            "secondaryToggleOffMessageLimit": 16,
+            "pressMessageLimit": 16,
+            "releaseMessageLimit": 16,
+            "doublePressMessageLimit": 16,
+            "holdMessageLimit": 16,
+            "holdReleaseMessageLimit": 16,
+            "sequentialMessageLimit": 64,
+            "sequentialStepLimit": 64,
+            "scrollingMessageLimit": 64,
+            "bankMessageLimit": 64,
+            "bootMessageLimit": 64,
             "bankExpressionMessageLimit": 8,
-            "globalExpressionMessageLimit": 8,
+            "globalExpressionMessageLimit": 16,
             "auxPressMessageLimit": 1,
             "auxHoldMessageLimit": 1,
             "auxToggleOnMessageLimit": 1,
-            "auxToggleOffMessageLimit": 1
+            "auxToggleOffMessageLimit": 1,
+            "bankLadderMessageLimit": 128,
+            "globalLadderMessageLimit": 128
         },
         "deviceApi": {
             "bufferSize": 8192,
