@@ -1,0 +1,11 @@
+{
+    "CLiCK": {
+        "deviceApi": {
+            "bufferSize": 8192,
+            "tokenSize": 1000
+        },
+        "deviceNameLength": 32,
+        "presetNameLength": 16,
+        "numberPresets": 128
+    }
+}

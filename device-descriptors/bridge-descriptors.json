@@ -29,7 +29,7 @@
                 "Switch In",
                 "Switch Out",
                 "Tap Tempo",
-                "Relay Out",
+                "MS Relay",
                 "Pulse Out",
                 "Fav Switch"
             ],
@@ -82,7 +82,6 @@
             "fs1Fs2",
             "fs2Fs3",
             "fs2Fs5",
-            "fs3Fs6",
             "fs4Fs5",
             "fs5Fs6",
             "none"
@@ -97,7 +96,6 @@
             "FS1 + FS2",
             "FS2 + FS3",
             "FS2 + FS5",
-            "FS3 + FS6",
             "FS4 + FS5",
             "FS5 + FS6",
             "None"
@@ -135,7 +133,7 @@
                 "Switch In",
                 "Switch Out",
                 "Tap Tempo",
-                "Relay Out",
+                "MS Relay",
                 "Pulse Out",
                 "Fav Switch"
             ],
@@ -168,6 +166,10 @@
             "bankLadderMessageLimit": 32,
             "globalLadderMessageLimit": 32
         },
+        "deviceApi": {
+            "bufferSize": 8192,
+            "tokenSize": 1000
+        },
         "numberMidiClocks": 2,
         "bankNameLength": 16,
         "switchNameLength": 8,
@@ -180,7 +182,6 @@
             "fs3",
             "fs4",
             "fs1Fs2",
-            "fs2Fs4",
             "fs3Fs4",
             "none"
         ],
@@ -190,7 +191,6 @@
             "FS3",
             "FS4",
             "FS1 + FS2",
-            "FS2 + FS4",
             "FS3 + FS4",
             "None"
         ],
@@ -220,13 +220,17 @@
                 "Exp Single",
                 "Exp Dual",
                 "Switch In"
-            ]
+            ],
+            "midiOutPorts": 0,
+            "midiInPorts": 0,
+            "displayH": 0,
+            "displayV": 0
         },
         "messageStacks": {
             "toggleOnMessageLimit": 64,
             "toggleOffMessageLimit": 64,
-            "secondaryToggleOnMessageLimit": 16,
-            "secondaryToggleOffMessageLimit": 16,
+            "secondaryToggleOnMessageLimit": 0,
+            "secondaryToggleOffMessageLimit": 0,
             "pressMessageLimit": 16,
             "releaseMessageLimit": 16,
             "doublePressMessageLimit": 16,
